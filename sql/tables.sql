@@ -1,0 +1,27 @@
+CREATE TABLE images (
+	img_id INT(10) NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    file_name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE newsletter (
+	id INT(10) NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(170) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    age INT(3) NOT NULL,
+    gender ENUM('male', 'female', 'other'),
+    birthdate DATE NOT NULL
+);
+
+CREATE TABLE admins (
+	user_id INT(10) NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    `user` VARCHAR(40) NOT NULL,
+    `password` CHAR(32) NOT NULL,
+    `type` VARCHAR(10) NOT NULL
+);
+
+-- CREATE TABLE message (
+-- 	id INT(10) NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+--     `name` VARCHAR(170) NOT NULL,
+--     email VARCHAR(100) NOT NULL,
+--     message VARCHAR(10000)
+-- );
